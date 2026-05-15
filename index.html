@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Incredible India — A Virtual Cultural Journey. Explore India's history, temples, festivals, cuisine, and leadership. Presented at AITU, Kazakhstan.">
+<meta name="author" content="AITU Cultural Exchange 2026">
+<meta name="theme-color" content="#D4A017">
+
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Incredible India — A Virtual Cultural Journey">
+<meta property="og:description" content="5,000 years of civilization explored through history, temples, festivals, cuisine, and modern innovation. Presented at AITU, Kazakhstan.">
+<meta property="og:image" content="images/hero-taj-mahal.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Incredible India — A Virtual Cultural Journey">
+<meta name="twitter:description" content="Explore India's rich heritage — temples, festivals, food, and modern innovation.">
+
+<title>Incredible India — A Virtual Cultural Journey</title>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Incredible India — Cultural Exchange",
+  "description": "A virtual cultural journey through India's 5,000-year heritage, presented at Astana IT University, Kazakhstan.",
+  "url": "https://aitu-incredible-india.vercel.app",
+  "sameAs": ["https://github.com/aitu-india-cultural"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════ SCROLL PROGRESS ═══════════════════════ -->
+<div id="scroll-progress" aria-hidden="true"><div id="scroll-progress-fill"></div></div>
+
+<!-- ═══════════════════════ BACK TO TOP ═══════════════════════ -->
+<button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+<!-- ═══════════════════════ LOADING SCREEN ═══════════════════════ -->
+<div id="loader" role="status" aria-label="Loading Incredible India">
+  <div class="loader-chakra" aria-hidden="true"></div>
+  <div class="loader-text">INCREDIBLE INDIA</div>
+  <div class="loader-sub">LOADING YOUR JOURNEY</div>
+</div>
+
+<!-- ═══════════════════════ SKIP LINK (ACCESSIBILITY) ═══════════════════════ -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ═══════════════════════ NAVIGATION ═══════════════════════ -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-logo">🇮🇳 <span>India</span> Cultural Exchange</div>
+
+  <!-- Mobile hamburger -->
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks" role="list">
+    <li><a href="#history">History</a></li>
+    <li><a href="#temples">Temples</a></li>
+    <li><a href="#culture">Culture</a></li>
+    <li><a href="#festivals">Festivals</a></li>
+    <li><a href="#food">Food</a></li>
+    <li><a href="#languages">Languages</a></li>
+    <li><a href="#modern">Modern</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#connection">India–KZ</a></li>
+    <li><a href="#quiz">Quiz</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section id="hero" aria-label="Hero — Incredible India">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-reel" aria-hidden="true">
+    <div class="hero-reel-slide"><img src="images/hero-taj-mahal.jpg" alt="Taj Mahal, Agra"></div>
+    <div class="hero-reel-slide"><img src="images/hero-varanasi.jpg" alt="Varanasi Ghats at sunset"></div>
+    <div class="hero-reel-slide"><img src="images/hero-kerala.jpg" alt="Kerala Backwaters"></div>
+    <div class="hero-reel-slide"><img src="images/hero-himalayas.jpg" alt="The Himalayas at dawn"></div>
+    <div class="hero-reel-slide"><img src="images/hero-holi.jpg" alt="Holi Festival of Colors"></div>
+  </div>
+  <div class="hero-particles" id="particles" aria-hidden="true"></div>
+  <div class="hero-mandala" aria-hidden="true"></div>
+  <div class="hero-content" id="main-content">
+    <span class="hero-om" aria-label="Om symbol">ॐ</span>
+    <h1 class="hero-title">Incredible<br>India</h1>
+    <p class="hero-tagline">A Land of Diversity, Spirituality &amp; Timeless Heritage</p>
+    <div class="hero-flags" aria-label="Indian flag colours" role="img">
+      <div class="flag-stripe" style="background:#FF9933;"></div>
+      <div class="flag-stripe flag-white"><span aria-hidden="true">☸</span></div>
+      <div class="flag-stripe" style="background:#138808;"></div>
+    </div>
+    <a href="#history" class="hero-cta"><span>Begin the Journey</span></a>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════ DID YOU KNOW ═══════════════════════ -->
+<div class="dyk-strip" role="complementary" aria-label="Did You Know facts about India">
+  <div class="dyk-inner">
+    <span class="dyk-badge">💡 DID YOU KNOW?</span>
+    <span id="dyk-text" aria-live="polite">India is home to the world's oldest civilization — the Indus Valley Civilization, dating back over 5,000 years.</span>
+    <button class="dyk-btn" onclick="nextFact()" aria-label="Show next fact">Next Fact →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════ HISTORY ═══════════════════════ -->
+<section id="history" aria-labelledby="history-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Chapter One</span>
+      <h2 class="section-title" id="history-heading">The Grand Story of India</h2>
+      <div class="gold-divider"></div>
+      <p class="section-sub">Five thousand years of civilization — from the banks of the Indus to the halls of modern democracy.</p>
+    </div>
+
+    <div class="timeline" role="list" aria-label="Historical timeline of India">
+      <div class="timeline-item reveal" role="listitem">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-content">
+          <div class="timeline-icon" aria-hidden="true">🏺</div>
+          <div class="timeline-year">3300 – 1300 BCE</div>
+          <h3 class="timeline-era">Indus Valley Civilization</h3>
+          <p class="timeline-desc">One of the world's earliest urban civilizations, flourishing at Mohenjo-daro and Harappa. Advanced city planning, sanitation systems, and trade networks rivaling ancient Egypt and Mesopotamia.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal" role="listitem">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-content">
+          <div class="timeline-icon" aria-hidden="true">📖</div>
+          <div class="timeline-year">1500 – 500 BCE</div>
+          <h3 class="timeline-era">Vedic Age</h3>
+          <p class="timeline-desc">The sacred Vedas were composed — four foundational texts of Hindu philosophy. Sanskrit became the language of knowledge. Mathematics, astronomy, and philosophy flourished.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal" role="listitem">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-content">
+          <div class="timeline-icon" aria-hidden="true">⚔️</div>
+          <div class="timeline-year">322 – 185 BCE</div>
+          <h3 class="timeline-era">Maurya Empire</h3>
+          <p class="timeline-desc">Emperor Ashoka unified most of the Indian subcontinent. After the Kalinga War, he embraced Buddhism and spread its teachings across Asia — shaping the soul of a continent.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal" role="listitem">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-content">
+          <div class="timeline-icon" aria-hidden="true">✨</div>
+          <div class="timeline-year">320 – 550 CE</div>
+          <h3 class="timeline-era">Gupta Golden Age</h3>
+          <p class="timeline-desc">India's renaissance — advances in mathematics (zero, decimal system), astronomy, medicine, literature, and arts. Aryabhata calculated Earth's rotation. Kalidasa wrote immortal poetry.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal" role="listitem">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-content">
+          <div class="timeline-icon" aria-hidden="true">🕌</div>
+          <div class="timeline-year">1526 – 1857 CE</div>
+          <h3 class="timeline-era">Mughal Era</h3>
+          <p class="timeline-desc">A magnificent era of art, architecture, and culture. The Taj Mahal, Red Fort, and countless monuments were built. Emperor Akbar championed religious tolerance and cultural synthesis.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal" role="listitem">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-content">
+          <div class="timeline-icon" aria-hidden="true">🕊️</div>
+          <div class="timeline-year">1857 – 1947 CE</div>
+          <h3 class="timeline-era">Freedom Movement</h3>
+          <p class="timeline-desc">Mahatma Gandhi's non-violent resistance movement inspired the world. August 15, 1947 — India declared independence, becoming the world's largest democracy.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Famous Personalities -->
+    <div class="reveal" style="margin-top:80px;">
+      <span class="section-label">Icons of India</span>
+      <h3 class="section-title" style="font-size:2rem;">Faces That Shaped History</h3>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="personalities reveal" role="list" aria-label="Famous personalities of India">
+      <div class="person-card" role="listitem" tabindex="0">
+        <div class="person-avatar" aria-hidden="true">🕊️</div>
+        <div class="person-name">Mahatma Gandhi</div>
+        <div class="person-role">Father of the Nation</div>
+      </div>
+      <div class="person-card" role="listitem" tabindex="0">
+        <div class="person-avatar" aria-hidden="true">⚔️</div>
+        <div class="person-name">Emperor Ashoka</div>
+        <div class="person-role">Mauryan Emperor &amp; Buddhist Patron</div>
+      </div>
+      <div class="person-card" role="listitem" tabindex="0">
+        <div class="person-avatar" aria-hidden="true">🌹</div>
+        <div class="person-name">Akbar the Great</div>
+        <div class="person-role">Mughal Emperor of Tolerance</div>
+      </div>
+      <div class="person-card" role="listitem" tabindex="0">
+        <div class="person-avatar" aria-hidden="true">📚</div>
+        <div class="person-name">Aryabhata</div>
+        <div class="person-role">Mathematician &amp; Astronomer</div>
+      </div>
+      <div class="person-card" role="listitem" tabindex="0">
+        <div class="person-avatar" aria-hidden="true">🌊</div>
+        <div class="person-name">Swami Vivekananda</div>
+        <div class="person-role">Spiritual Leader &amp; Philosopher</div>
+      </div>
+      <div class="person-card" role="listitem" tabindex="0">
+        <div class="person-avatar" aria-hidden="true">⚖️</div>
+        <div class="person-name">Dr. B.R. Ambedkar</div>
+        <div class="person-role">Father of the Constitution</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TEMPLES & SPIRITUALITY ═══════════════════════ -->
+<section id="temples" aria-labelledby="temples-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Chapter Two</span>
+      <h2 class="section-title" id="temples-heading">Temples &amp; Spirituality</h2>
+      <div class="gold-divider"></div>
+      <p class="section-sub">Where stone meets the sacred — India's temples are more than architecture; they are living prayers.</p>
+    </div>
+    <div class="temples-grid">
+      <article class="temple-card reveal">
+        <div class="temple-visual" style="background:linear-gradient(135deg,#1a0a00,#3d1a00); position:relative; overflow:hidden;">
+          <img src="images/temple-kedarnath.jpg" alt="Kedarnath Temple perched in the Himalayas" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;" loading="lazy">
+        </div>
+        <div class="temple-info">
+          <h3 class="temple-name">Kedarnath Temple</h3>
+          <div class="temple-loc">Uttarakhand · 3,583m altitude</div>
+          <p class="temple-desc">Perched in the Himalayas, this 8th-century Shiva temple is one of the Char Dham pilgrimage sites. Accessible only 6 months a year due to harsh winters.</p>
+        </div>
+      </article>
+      <article class="temple-card reveal">
+        <div class="temple-visual" style="background:linear-gradient(135deg,#001a1a,#003d3d); position:relative; overflow:hidden;">
+          <img src="images/temple-badrinath.jpg" alt="Badrinath Temple on Alaknanda River" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;" loading="lazy">
+        </div>
+        <div class="temple-info">
+          <h3 class="temple-name">Badrinath Temple</h3>
+          <div class="temple-loc">Uttarakhand · Alaknanda River</div>
+          <p class="temple-desc">Dedicated to Lord Vishnu, nestled between Nar and Narayan mountain ranges. One of the 108 Divya Desams — divine centers of Vaishnavism.</p>
+        </div>
+      </article>
+      <article class="temple-card reveal">
+        <div class="temple-visual" style="background:linear-gradient(135deg,#1a0500,#3d1500); position:relative; overflow:hidden;">
+          <img src="images/temple-jagannath.jpg" alt="Jagannath Puri Temple in Odisha" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;" loading="lazy">
+        </div>
+        <div class="temple-info">
+          <h3 class="temple-name">Jagannath Puri</h3>
+          <div class="temple-loc">Odisha · Bay of Bengal</div>
+          <p class="temple-desc">Home of Lord Jagannath. The annual Rath Yatra chariot festival draws millions of devotees from across the world.</p>
+        </div>
+      </article>
+      <article class="temple-card reveal">
+        <div class="temple-visual" style="background:linear-gradient(135deg,#1a0015,#3d0030); position:relative; overflow:hidden;">
+          <img src="images/temple-meenakshi.jpg" alt="Meenakshi Temple gopuram in Madurai" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;" loading="lazy">
+        </div>
+        <div class="temple-info">
+          <h3 class="temple-name">Meenakshi Temple</h3>
+          <div class="temple-loc">Madurai · Tamil Nadu</div>
+          <p class="temple-desc">A Dravidian masterpiece with 14 towering gopurams adorned with thousands of colorful sculptures. Dedicated to Goddess Meenakshi and Lord Sundareshwarar.</p>
+        </div>
+      </article>
+      <article class="temple-card reveal">
+        <div class="temple-visual" style="background:linear-gradient(135deg,#0d0d00,#2d2d00); position:relative; overflow:hidden;">
+          <img src="images/temple-golden.jpg" alt="Golden Temple Harmandir Sahib Amritsar" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;" loading="lazy">
+        </div>
+        <div class="temple-info">
+          <h3 class="temple-name">Golden Temple (Harmandir Sahib)</h3>
+          <div class="temple-loc">Amritsar · Punjab</div>
+          <p class="temple-desc">The holiest Sikh shrine, shimmering in gold beside the sacred Amrit Sarovar lake. Feeds 100,000 pilgrims daily through the Langar tradition — regardless of religion.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="reveal" style="margin-top:60px;">
+      <span class="section-label">The Inner Path</span>
+      <h3 class="section-title" style="font-size:2rem;">Yoga, Dharma &amp; Indian Philosophy</h3>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="spiritual-grid reveal">
+      <div class="spirit-card">
+        <span class="spirit-icon" aria-hidden="true">🧘</span>
+        <h4 class="spirit-title">Yoga &amp; Meditation</h4>
+        <p class="spirit-text">A 5,000-year-old science of body, mind, and soul. Practiced by 300 million people worldwide. The UN declared June 21 as International Day of Yoga — proposed by India.</p>
+      </div>
+      <div class="spirit-card">
+        <span class="spirit-icon" aria-hidden="true">🌸</span>
+        <h4 class="spirit-title">Dharma</h4>
+        <p class="spirit-text">The cosmic order and ethical duty that sustains the universe. Living in harmony with your truth, community, and nature — the foundational principle of Indian philosophy.</p>
+      </div>
+      <div class="spirit-card">
+        <span class="spirit-icon" aria-hidden="true">⚖️</span>
+        <h4 class="spirit-title">Karma</h4>
+        <p class="spirit-text">"As you sow, so shall you reap." Every action has consequences that echo through time. Karma encourages conscious, compassionate living — a concept that has influenced global ethics.</p>
+      </div>
+      <div class="spirit-card">
+        <span class="spirit-icon" aria-hidden="true">🌍</span>
+        <h4 class="spirit-title">Ahimsa</h4>
+        <p class="spirit-text">Non-violence as a way of life — the principle that inspired Gandhi's independence movement, Martin Luther King Jr., and the global peace movement. India gave the world this profound gift.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ CULTURE & TRADITIONS ═══════════════════════ -->
+<section id="culture" aria-labelledby="culture-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Chapter Three</span>
+      <h2 class="section-title" id="culture-heading">Culture &amp; Traditions</h2>
+      <div class="gold-divider"></div>
+      <p class="section-sub">From the silk of Varanasi to the drums of Punjab — India dances, sings, and wears its soul on its sleeve.</p>
+    </div>
+    <div class="culture-grid">
+      <article class="culture-card reveal">
+        <span class="culture-icon" aria-hidden="true">🥻</span>
+        <h3 class="culture-title">The Saree</h3>
+        <p class="culture-text">Nine yards of unstitched fabric transformed into poetry. Each state has its own draping style and weave — Kanjeevaram, Banarasi, Chikankari. Worn by 500 million women daily.</p>
+      </article>
+      <article class="culture-card reveal">
+        <span class="culture-icon" aria-hidden="true">👘</span>
+        <h3 class="culture-title">Sherwani &amp; Kurta</h3>
+        <p class="culture-text">The Sherwani — regal and ornate — is worn at weddings and celebrations. The Kurta is everyday elegance, worn across India in cotton, silk, and every color imaginable.</p>
+      </article>
+      <article class="culture-card reveal">
+        <span class="culture-icon" aria-hidden="true">💃</span>
+        <h3 class="culture-title">Bharatanatyam</h3>
+        <p class="culture-text">India's oldest classical dance form from Tamil Nadu. Every gesture (mudra), eye movement, and footstep tells a story from Hindu mythology — a 2,000-year-old living art.</p>
+      </article>
+      <article class="culture-card reveal">
+        <span class="culture-icon" aria-hidden="true">🕺</span>
+        <h3 class="culture-title">Kathak</h3>
+        <p class="culture-text">North India's classical dance — a mesmerizing blend of Hindustani music, spinning footwork, and expressive storytelling. Born in the Mughal courts of Lucknow and Jaipur.</p>
+      </article>
+      <article class="culture-card reveal">
+        <span class="culture-icon" aria-hidden="true">🥁</span>
+        <h3 class="culture-title">Bhangra</h3>
+        <p class="culture-text">The electrifying harvest dance of Punjab — dhol drums, vibrant turbans, and pure joy. Bhangra has traveled from wheat fields to global stages and influenced world music.</p>
+      </article>
+      <article class="culture-card reveal">
+        <span class="culture-icon" aria-hidden="true">🎵</span>
+        <h3 class="culture-title">Hindustani &amp; Carnatic</h3>
+        <p class="culture-text">Two ancient musical traditions — Hindustani from North India with its deep ragas and sitar, Carnatic from the South with intricate vocal patterns. Both UNESCO intangible heritage.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FESTIVALS ═══════════════════════ -->
+<section id="festivals" aria-labelledby="festivals-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Chapter Four</span>
+      <h2 class="section-title" id="festivals-heading">Festivals of India</h2>
+      <div class="gold-divider"></div>
+      <p class="section-sub">India celebrates life in colour, light, music and community — every month brings a new reason to rejoice.</p>
+    </div>
+    <div class="festivals-grid">
+      <article class="festival-card reveal" style="border-color:rgba(212,160,23,0.3);">
+        <div class="festival-header" style="background:linear-gradient(135deg,#2d1800,#5c3a00);">
+          <div class="festival-img-slot">
+            <img src="images/festival-diwali.jpg" alt="Diwali festival with oil lamps" loading="lazy">
+          </div>
+          <div class="diwali-lights" aria-hidden="true"><div class="diya"></div><div class="diya" style="animation-delay:0.3s"></div><div class="diya" style="animation-delay:0.6s"></div><div class="diya" style="animation-delay:0.9s"></div><div class="diya" style="animation-delay:1.2s"></div></div>
+          <h3 class="festival-name">Diwali</h3>
+          <div class="festival-date">FESTIVAL OF LIGHTS · OCTOBER–NOVEMBER</div>
+        </div>
+        <div class="festival-body">
+          <p class="festival-desc">The triumph of light over darkness. Millions of oil lamps (diyas) illuminate homes and streets. Families exchange sweets, burst fireworks, and worship Goddess Lakshmi. The sky glows gold for five nights.</p>
+        </div>
+      </article>
+      <article class="festival-card reveal" style="border-color:rgba(194,24,91,0.3);">
+        <div class="festival-header" style="background:linear-gradient(135deg,#1a0018,#3d003a);" id="holi-header">
+          <div class="festival-img-slot">
+            <img src="images/festival-holi.jpg" alt="Holi festival with vibrant colours" loading="lazy">
+          </div>
+          <div class="holi-dots" id="holi-dots" aria-hidden="true"></div>
+          <h3 class="festival-name">Holi</h3>
+          <div class="festival-date">FESTIVAL OF COLOURS · MARCH</div>
+        </div>
+        <div class="festival-body">
+          <p class="festival-desc">The most joyful day of the year! People chase each other with colored powder (gulal) and water guns. It celebrates spring, love, and the defeat of evil. No social barriers — everyone plays together!</p>
+        </div>
+      </article>
+      <article class="festival-card reveal" style="border-color:rgba(255,153,51,0.3);">
+        <div class="festival-header" style="background:linear-gradient(135deg,#1a0500,#3d1000);">
+          <div class="festival-img-slot">
+            <img src="images/festival-navratri.jpeg" alt="Navratri Garba dance festival" loading="lazy">
+          </div>
+          <h3 class="festival-name">Navratri</h3>
+          <div class="festival-date">9 NIGHTS OF THE GODDESS · SEPT–OCT</div>
+        </div>
+        <div class="festival-body">
+          <p class="festival-desc">Nine nights of dance, music, and devotion to Goddess Durga. The Garba and Dandiya Raas dances of Gujarat fill vast open grounds. Each night has a dedicated color, worn to honor different forms of the divine.</p>
+        </div>
+      </article>
+      <article class="festival-card reveal" style="border-color:rgba(19,136,8,0.3);">
+        <div class="festival-header" style="background:linear-gradient(135deg,#001a00,#003d00);">
+          <div class="festival-img-slot">
+            <img src="images/festival-eid.jpg" alt="Eid al-Fitr celebrations in India" loading="lazy">
+          </div>
+          <h3 class="festival-name">Eid al-Fitr</h3>
+          <div class="festival-date">FESTIVAL OF BREAKING FAST</div>
+        </div>
+        <div class="festival-body">
+          <p class="festival-desc">Marking the end of Ramadan, India's 200 million Muslims celebrate with prayers, biryani feasts, sheer khurma, new clothes, and acts of charity. Streets fill with joy and brotherhood.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOD ═══════════════════════ -->
+<section id="food" aria-labelledby="food-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Chapter Five</span>
+      <h2 class="section-title" id="food-heading">The Flavours of India</h2>
+      <div class="gold-divider"></div>
+      <p class="section-sub">A billion recipes, a thousand spices — Indian cuisine is a love letter written in flavor.</p>
+    </div>
+    <div class="food-tabs" role="tablist" aria-label="Food categories">
+      <button class="food-tab active" role="tab" aria-selected="true" aria-controls="food-north" onclick="switchFood(this,'north')">🫕 North Indian</button>
+      <button class="food-tab" role="tab" aria-selected="false" aria-controls="food-south" onclick="switchFood(this,'south')">🥘 South Indian</button>
+      <button class="food-tab" role="tab" aria-selected="false" aria-controls="food-street" onclick="switchFood(this,'street')">🌮 Street Food</button>
+    </div>
+    <div id="food-north" class="food-panel active" role="tabpanel">
+      <article class="dish-card reveal">
+        <div class="dish-photo"><img src="images/food-butter-chicken.jpg" alt="Butter Chicken" loading="lazy"></div>
+        <div class="dish-info">
+          <h3 class="dish-name">Butter Chicken</h3>
+          <p class="dish-desc">Tender chicken in a velvety tomato-cream sauce. Born in Delhi in the 1950s, now the most-ordered Indian dish worldwide.</p>
+        </div>
+      </article>
+      <article class="dish-card reveal">
+        <div class="dish-photo"><img src="images/food-biryani.jpg" alt="Fragrant Biryani" loading="lazy"></div>
+        <div class="dish-info">
+          <h3 class="dish-name">Biryani</h3>
+          <p class="dish-desc">Fragrant basmati rice layered with spiced meat or vegetables. Each city — Lucknow, Hyderabad, Kolkata — has its own signature style.</p>
+        </div>
+      </article>
+      <article class="dish-card reveal">
+        <div class="dish-photo"><img src="images/food-naan-dal.jpg" alt="Naan and Dal Makhani" loading="lazy"></div>
+        <div class="dish-info">
+          <h3 class="dish-name">Naan &amp; Dal Makhani</h3>
+          <p class="dish-desc">Fluffy leavened bread from a tandoor oven paired with slow-cooked black lentils in butter and cream. Pure Punjabi comfort.</p>
+        </div>
+      </article>
+      <article class="dish-card reveal">
+        <div class="dish-photo"><img src="images/food-palak-paneer.jpg" alt="Palak Paneer" loading="lazy"></div>
+        <div class="dish-info">
+          <h3 class="dish-name">Palak Paneer</h3>
+          <p class="dish-desc">Fresh cottage cheese cubes in a vibrant spinach sauce. A vegetarian masterpiece loved by millions — spiced with ginger, garlic, and garam masala.</p>
+        </div>
+      </article>
+    </div>
+    <div id="food-south" class="food-panel" role="tabpanel">
+      <article class="dish-card reveal">
+        <div class="dish-photo"><img src="images/food-masala-dosa.jpg" alt="Crispy Masala Dosa" loading="lazy"></div>
+        <div class="dish-info">
+          <h3 class="dish-name">Masala Dosa</h3>
+          <p class="dish-desc">A crispy rice-lentil crepe wrapped around spiced potato filling. Served with coconut chutney and sambar. A breakfast that became a global icon.</p>
+        </div>
+      </article>
+      <article class="dish-card reveal">
+        <div class="dish-photo"><img src="images/food-idli-sambar.jpg" alt="Idli Sambar" loading="lazy"></div>
+        <div class="dish-info">
+          <h3 class="dish-name">Idli Sambar</h3>
+          <p class="dish-desc">Steamed rice cakes dipped in tangy lentil soup with vegetables. Light, healthy, and deeply satisfying — the quintessential South Indian breakfast.</p>
+        </div>
+      </article>
+      <article class="dish-card reveal">
+        <div class="dish-photo"><img src="images/food-hyderabadi-biryani.jpg" alt="Hyderabadi Biryani" loading="lazy"></div>
+        <div class="dish-info">
+          <h3 class="dish-name">Hyderabadi Biryani</h3>
+          <p class="dish-desc">The crown jewel of Hyderabad — slow-cooked with saffron, whole spices, and marinated meat. The dum method seals in every layer of flavour.</p>
+        </div>
+      </article>
+      <article class="dish-card reveal">
+        <div class="dish-photo"><img src="images/food-kerala-fish-curry.jpg" alt="Kerala Fish Curry" loading="lazy"></div>
+        <div class="dish-info">
+          <h3 class="dish-name">Kerala Fish Curry</h3>
+          <p class="dish-desc">Fresh fish simmered in raw mango, coconut milk, and Kodampuli. A recipe perfected over generations on the Malabar Coast.</p>
+        </div>
+      </article>
+    </div>
+    <div id="food-street" class="food-panel" role="tabpanel">
+      <article class="dish-card reveal">
+        <div class="dish-photo"><img src="images/food-pani-puri.jpg" alt="Pani Puri street snack" loading="lazy"></div>
+        <div class="dish-info">
+          <h3 class="dish-name">Pani Puri</h3>
+          <p class="dish-desc">Hollow crispy spheres filled with tangy tamarind water, spiced chickpeas, and potatoes. The quintessential Indian street experience — each bite a burst of flavour.</p>
+        </div>
+      </article>
+      <article class="dish-card reveal">
+        <div class="dish-photo"><img src="images/food-pav-bhaji.jpg" alt="Pav Bhaji Mumbai street food" loading="lazy"></div>
+        <div class="dish-info">
+          <h3 class="dish-name">Pav Bhaji</h3>
+          <p class="dish-desc">A thick vegetable mash on a griddle with mountains of butter, served with soft bread rolls. Born in Mumbai's textile mills for quick worker lunches.</p>
+        </div>
+      </article>
+      <article class="dish-card reveal">
+        <div class="dish-photo"><img src="images/food-kathi-roll.jpg" alt="Kathi Roll Kolkata" loading="lazy"></div>
+        <div class="dish-info">
+          <h3 class="dish-name">Kathi Roll</h3>
+          <p class="dish-desc">Kolkata's gift to street food — charred flatbread rolled around marinated meats or paneer, onions, and chutney. Fast, flavorful, and iconic.</p>
+        </div>
+      </article>
+      <article class="dish-card reveal">
+        <div class="dish-photo"><img src="images/food-jalebi.jpg" alt="Golden Jalebi sweet" loading="lazy"></div>
+        <div class="dish-info">
+          <h3 class="dish-name">Jalebi</h3>
+          <p class="dish-desc">Hot spirals of fermented batter deep-fried and soaked in saffron syrup. Eaten at breakfast in North India, at festivals everywhere. Pure golden joy.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ LANGUAGES ═══════════════════════ -->
+<section id="languages" aria-labelledby="languages-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Chapter Six</span>
+      <h2 class="section-title" id="languages-heading">Languages &amp; Diversity</h2>
+      <div class="gold-divider"></div>
+      <p class="section-sub">India speaks in 22 official languages, 780 dialects, and 6 script families — and every voice is India.</p>
+    </div>
+    <div class="lang-showcase reveal" role="list" aria-label="Indian languages">
+      <div class="lang-pill" role="listitem"><span class="lang-script" aria-hidden="true">हि</span><span class="lang-name">Hindi</span></div>
+      <div class="lang-pill" role="listitem"><span class="lang-script" aria-hidden="true">বা</span><span class="lang-name">Bengali</span></div>
+      <div class="lang-pill" role="listitem"><span class="lang-script" aria-hidden="true">த</span><span class="lang-name">Tamil</span></div>
+      <div class="lang-pill" role="listitem"><span class="lang-script" aria-hidden="true">తె</span><span class="lang-name">Telugu</span></div>
+      <div class="lang-pill" role="listitem"><span class="lang-script" aria-hidden="true">ಕ</span><span class="lang-name">Kannada</span></div>
+      <div class="lang-pill" role="listitem"><span class="lang-script" aria-hidden="true">മ</span><span class="lang-name">Malayalam</span></div>
+      <div class="lang-pill" role="listitem"><span class="lang-script" aria-hidden="true">ગ</span><span class="lang-name">Gujarati</span></div>
+      <div class="lang-pill" role="listitem"><span class="lang-script" aria-hidden="true">ਪ</span><span class="lang-name">Punjabi</span></div>
+      <div class="lang-pill" role="listitem"><span class="lang-script" aria-hidden="true">म</span><span class="lang-name">Marathi</span></div>
+      <div class="lang-pill" role="listitem"><span class="lang-script" aria-hidden="true">ଓ</span><span class="lang-name">Odia</span></div>
+      <div class="lang-pill" role="listitem"><span class="lang-script" aria-hidden="true">অ</span><span class="lang-name">Assamese</span></div>
+      <div class="lang-pill" role="listitem"><span class="lang-script" aria-hidden="true">उ</span><span class="lang-name">Urdu</span></div>
+      <div class="lang-pill" role="listitem"><span class="lang-script" aria-hidden="true">स</span><span class="lang-name">Sanskrit</span></div>
+    </div>
+    <div class="unity-box reveal">
+      <div class="unity-title">🇮🇳 Unity in Diversity</div>
+      <p class="unity-text">
+        India is not just a country — it is a living experiment in pluralism. Over 1.4 billion people from 2,000+ ethnic groups, 6 major religions, and hundreds of traditions live together — sharing the same sky, the same festivals, and the same dream of progress.
+        <br><br>
+        <em>"अनेकता में एकता" — Unity in Diversity</em>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ MODERN INDIA ═══════════════════════ -->
+<section id="modern" aria-labelledby="modern-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Chapter Seven</span>
+      <h2 class="section-title" id="modern-heading">Modern India Rising</h2>
+      <div class="gold-divider"></div>
+      <p class="section-sub">From ancient wisdom to frontier technology — India is writing the future with the ink of its past.</p>
+    </div>
+    <div class="modern-grid">
+      <article class="modern-card reveal">
+        <span class="modern-icon" aria-hidden="true">🚀</span>
+        <h3 class="modern-title">ISRO &amp; Space</h3>
+        <div class="modern-stat">Chandrayaan-3</div>
+        <p class="modern-text">India became the 4th nation to land on the Moon and the FIRST to reach the lunar south pole (2023). ISRO launched 104 satellites in a single mission. Mars Orbiter Mission succeeded on the first attempt.</p>
+      </article>
+      <article class="modern-card reveal">
+        <span class="modern-icon" aria-hidden="true">💻</span>
+        <h3 class="modern-title">Digital India</h3>
+        <div class="modern-stat">UPI #1</div>
+        <p class="modern-text">India's UPI payment system processes 10 billion+ transactions per month — the world's largest real-time payment network. Over 900 million internet users. 5G rollout across 700+ cities.</p>
+      </article>
+      <article class="modern-card reveal">
+        <span class="modern-icon" aria-hidden="true">🦄</span>
+        <h3 class="modern-title">Startup Ecosystem</h3>
+        <div class="modern-stat">115+ Unicorns</div>
+        <p class="modern-text">India is the 3rd largest startup ecosystem globally. Companies like Zomato, Paytm, and Ola have redefined entire industries. Bengaluru, Mumbai, and Delhi are global tech hubs.</p>
+      </article>
+      <article class="modern-card reveal">
+        <span class="modern-icon" aria-hidden="true">☀️</span>
+        <h3 class="modern-title">Renewable Energy</h3>
+        <div class="modern-stat">175 GW Solar</div>
+        <p class="modern-text">India aims for 500 GW of renewable energy by 2030. The International Solar Alliance, co-founded by India, unites 120+ countries in the fight against climate change.</p>
+      </article>
+      <article class="modern-card reveal">
+        <span class="modern-icon" aria-hidden="true">🏥</span>
+        <h3 class="modern-title">Medical Innovation</h3>
+        <div class="modern-stat">Pharmacy of the World</div>
+        <p class="modern-text">India produces 60% of global vaccines and supplied vaccines to 100+ countries through the Vaccine Maitri initiative. Covaxin was India's own indigenous COVID-19 vaccine.</p>
+      </article>
+      <article class="modern-card reveal">
+        <span class="modern-icon" aria-hidden="true">🧠</span>
+        <h3 class="modern-title">Global Tech Leaders</h3>
+        <div class="modern-stat">CEOs of the World</div>
+        <p class="modern-text">Indians lead Google (Sundar Pichai), Microsoft (Satya Nadella), IBM, and Adobe. India produces 1.5 million engineers per year — the world's largest engineering talent pool.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ LEADERSHIP — NEW SECTION ═══════════════════════ -->
+<section id="leadership" aria-labelledby="leadership-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Chapter Eight</span>
+      <h2 class="section-title" id="leadership-heading">India's Leadership</h2>
+      <div class="gold-divider"></div>
+      <p class="section-sub">The guardians of the world's largest democracy — steering 1.4 billion dreams towards a brighter future.</p>
+    </div>
+
+    <div class="leadership-grid">
+
+      <!-- PRESIDENT -->
+      <article class="leader-card reveal">
+        <div class="leader-card-header" style="background:linear-gradient(135deg,#0d0005,#2d0015,#1a0050);">
+          <div class="leader-badge">15th President of India</div>
+          <div class="leader-portrait-wrap">
+            <div class="leader-portrait" aria-label="Smt. Droupadi Murmu">
+              <img src="images/president-murmu.jpg" alt="President Droupadi Murmu" loading="lazy">
+              <div class="leader-portrait-fallback" aria-hidden="true">🙏</div>
+            </div>
+          </div>
+          <div class="leader-ashoka" aria-hidden="true">☸</div>
+        </div>
+        <div class="leader-body">
+          <div class="leader-meta">
+            <h3 class="leader-name">Smt. Droupadi Murmu</h3>
+            <div class="leader-title-tag">Rashtrapati · President of India</div>
+            <div class="leader-since">In office since: <strong>25 July 2022</strong></div>
+          </div>
+
+          <p class="leader-intro">
+            Born on 20 June 1958 in Uparbeda village, Mayurbhanj, Odisha, into a Santhal tribal family, Smt. Droupadi Murmu rose from humble beginnings to become the <strong>15th President of India</strong> — the first person from a tribal community and the second woman ever to hold India's highest constitutional office. Her extraordinary journey is a symbol of resilience, determination, and the power of education.
+          </p>
+
+          <div class="leader-achievements">
+            <h4 class="leader-section-label">🏛️ Key Achievements</h4>
+            <ul class="leader-list">
+              <li>First tribal woman and second woman president of India (2022)</li>
+              <li>First president born in independent India; youngest person to hold the office</li>
+              <li>First woman Governor of Jharkhand (2015–2021); longest-serving governor of the state</li>
+              <li>Pandit Nilakantha Das Best Legislator Award, Odisha (2007)</li>
+              <li>Championed tribal welfare, girls' education, and social inclusion throughout her career</li>
+              <li>Extensive international diplomacy — visited 30+ countries as President to strengthen India's global outreach</li>
+            </ul>
+          </div>
+
+          <div class="leader-roles">
+            <h4 class="leader-section-label">⚖️ Roles &amp; Responsibilities</h4>
+            <div class="leader-roles-grid">
+              <div class="leader-role-item">
+                <span>🔱</span> Constitutional head of state and supreme commander of India's Armed Forces
+              </div>
+              <div class="leader-role-item">
+                <span>📜</span> Gives assent to bills passed by Parliament; can return bills for reconsideration
+              </div>
+              <div class="leader-role-item">
+                <span>🌐</span> Represents India in international affairs and receives foreign dignitaries
+              </div>
+              <div class="leader-role-item">
+                <span>🏛️</span> Appoints the Prime Minister, Chief Justices, and other constitutional officers
+              </div>
+            </div>
+          </div>
+
+          <blockquote class="leader-quote">
+            "My election is not just mine — it is the victory of every poor person, every tribal person, every daughter of India."
+            <cite>— Smt. Droupadi Murmu</cite>
+          </blockquote>
+        </div>
+      </article>
+
+      <!-- PRIME MINISTER -->
+      <article class="leader-card reveal">
+        <div class="leader-card-header" style="background:linear-gradient(135deg,#0d0500,#2d1200,#1a0a00);">
+          <div class="leader-badge">14th Prime Minister of India</div>
+          <div class="leader-portrait-wrap">
+            <div class="leader-portrait" aria-label="Shri Narendra Modi">
+              <img src="images/pm-modi.jpg" alt="Prime Minister Narendra Modi" loading="lazy">
+              <div class="leader-portrait-fallback" aria-hidden="true">🇮🇳</div>
+            </div>
+          </div>
+          <div class="leader-ashoka" aria-hidden="true">☸</div>
+        </div>
+        <div class="leader-body">
+          <div class="leader-meta">
+            <h3 class="leader-name">Shri Narendra Modi</h3>
+            <div class="leader-title-tag">Pradhan Mantri · Prime Minister of India</div>
+            <div class="leader-since">In office since: <strong>26 May 2014</strong> (3rd consecutive term)</div>
+          </div>
+
+          <p class="leader-intro">
+            Born on 17 September 1950 in Vadnagar, Gujarat, Shri Narendra Modi is the <strong>14th Prime Minister of India</strong>, serving his historic third consecutive term since June 2024 — making him the second-longest serving PM after Jawaharlal Nehru. Rising from humble origins as a tea seller, he transformed Gujarat's economy before ascending to national leadership with a vision of a "Viksit Bharat" (Developed India) by 2047.
+          </p>
+
+          <div class="leader-achievements">
+            <h4 class="leader-section-label">🚀 Key Achievements</h4>
+            <ul class="leader-list">
+              <li>Only non-Congress leader to win three consecutive Lok Sabha elections with majority mandates (2014, 2019, 2024)</li>
+              <li>Launched Digital India, Make in India, Swachh Bharat Abhiyan, and PM Jan Dhan Yojana</li>
+              <li>Oversaw Chandrayaan-3 — India's historic lunar south pole landing (2023)</li>
+              <li>Revoked Article 370 in Jammu &amp; Kashmir (2019), restructuring the region</li>
+              <li>Led India to become the 5th largest economy in the world</li>
+              <li>Co-founded the International Solar Alliance; positioned India as global climate leader</li>
+              <li>Received highest civilian honours from multiple nations including Bhutan, UAE, and Saudi Arabia</li>
+            </ul>
+          </div>
+
+          <div class="leader-roles">
+            <h4 class="leader-section-label">⚙️ Roles &amp; Responsibilities</h4>
+            <div class="leader-roles-grid">
+              <div class="leader-role-item">
+                <span>🏛️</span> Head of Government; chairs Cabinet meetings and drives national policy
+              </div>
+              <div class="leader-role-item">
+                <span>💹</span> Oversees economic planning, budgets, and major infrastructure programs
+              </div>
+              <div class="leader-role-item">
+                <span>🌍</span> Leads India's foreign policy and represents the nation at G20, UN, and global summits
+              </div>
+              <div class="leader-role-item">
+                <span>🔰</span> Commands national security decisions and chairs the Cabinet Committee on Security
+              </div>
+            </div>
+          </div>
+
+          <blockquote class="leader-quote">
+            "India is not a country — it is a living civilization. And a civilization does not just survive; it inspires."
+            <cite>— Shri Narendra Modi</cite>
+          </blockquote>
+        </div>
+      </article>
+
+    </div><!-- end leadership-grid -->
+
+    <!-- Constitutional Structure box -->
+    <div class="constitution-box reveal">
+      <h3 class="constitution-title">🏛️ How India's Democracy Works</h3>
+      <div class="constitution-flow">
+        <div class="cf-step">
+          <div class="cf-icon">👥</div>
+          <div class="cf-label">1.4 Billion Citizens</div>
+          <div class="cf-sub">The world's largest electorate</div>
+        </div>
+        <div class="cf-arrow" aria-hidden="true">→</div>
+        <div class="cf-step">
+          <div class="cf-icon">🗳️</div>
+          <div class="cf-label">Lok Sabha</div>
+          <div class="cf-sub">Lower House · 543 elected seats</div>
+        </div>
+        <div class="cf-arrow" aria-hidden="true">→</div>
+        <div class="cf-step">
+          <div class="cf-icon">👔</div>
+          <div class="cf-label">Prime Minister</div>
+          <div class="cf-sub">Head of Government</div>
+        </div>
+        <div class="cf-arrow" aria-hidden="true">→</div>
+        <div class="cf-step">
+          <div class="cf-icon">🏛️</div>
+          <div class="cf-label">President</div>
+          <div class="cf-sub">Constitutional Head of State</div>
+        </div>
+      </div>
+      <p class="constitution-note">India follows a parliamentary democracy modeled on the Westminster system. The President is the constitutional head; the Prime Minister holds executive power. Together they lead the world's largest democracy.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════ INDIA–KAZAKHSTAN CONNECTION ═══════════════════════ -->
+<section id="connection" aria-labelledby="connection-heading">
+  <div class="container">
+    <div class="connection-content">
+      <div class="reveal">
+        <span class="section-label">A Special Bond</span>
+        <h2 class="section-title" id="connection-heading">India &amp; Kazakhstan</h2>
+        <div class="gold-divider" style="margin:20px auto;"></div>
+        <p class="section-sub" style="margin:0 auto 40px;">Two ancient civilizations, a shared steppe and spice road, and a warm friendship built across centuries and continents.</p>
+      </div>
+      <div class="flags-display reveal" aria-label="India and Kazakhstan flags">
+        <span role="img" aria-label="India flag">🇮🇳</span>
+        <span class="flags-connector" aria-hidden="true">✦</span>
+        <span role="img" aria-label="Kazakhstan flag">🇰🇿</span>
+      </div>
+      <p class="connection-text reveal">
+        India and Kazakhstan share more than diplomatic ties — they share the spirit of hospitality, respect for nature, love of music and dance, and a deep reverence for their ancestral heritage. Astana's skyline of golden domes echoes Jaipur's amber-hued palaces. The Kazakh dastarkhan table and the Indian langar share the same soul.
+      </p>
+      <div class="similarities-grid reveal">
+        <div class="similarity-item"><span class="similarity-icon" aria-hidden="true">🤝</span><div>Strategic partners since 1992 — India was among the first nations to recognize Kazakhstan's independence.</div></div>
+        <div class="similarity-item"><span class="similarity-icon" aria-hidden="true">🎶</span><div>Both cultures celebrate music, dance, and oral storytelling as living traditions passed through generations.</div></div>
+        <div class="similarity-item"><span class="similarity-icon" aria-hidden="true">☀️</span><div>Both nations revere the sun — Nowruz (KZ) and Makar Sankranti (IN) are solar festivals celebrating nature's cycles.</div></div>
+        <div class="similarity-item"><span class="similarity-icon" aria-hidden="true">🌿</span><div>Ayurvedic and traditional Kazakh medicine both use herbs, plants, and nature as the first pharmacy.</div></div>
+        <div class="similarity-item"><span class="similarity-icon" aria-hidden="true">🦅</span><div>National symbols of strength — India's Ashoka Chakra and Kazakhstan's Golden Eagle represent resilience and freedom.</div></div>
+        <div class="similarity-item"><span class="similarity-icon" aria-hidden="true">🎓</span><div>Thousands of Indian students study at AITU and Kazakh universities, building bridges of knowledge and friendship.</div></div>
+      </div>
+      <div class="welcome-msg reveal">
+        <p>To every friend at Astana IT University — <em>Namaste!</em> 🙏<br><br>
+        You are not just witnessing a cultural exchange. You are witnessing 5,000 years of a civilization that has always believed: <em>"Vasudhaiva Kutumbakam"</em> — The World is One Family.<br><br>
+        Welcome to Incredible India. 🇮🇳</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ GALLERY ═══════════════════════ -->
+<section id="gallery" aria-labelledby="gallery-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Visual Journey</span>
+      <h2 class="section-title" id="gallery-heading">Photo Gallery</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="gallery-slider reveal" role="region" aria-label="Photo gallery of India" aria-roledescription="carousel">
+      <div class="gallery-track" id="gallery-track">
+        <div class="gallery-slide" style="background:linear-gradient(135deg,#1a0a00,#3d2000);" role="group" aria-label="Slide 1 of 7: Taj Mahal">
+          <img src="images/gallery-taj-mahal.jpg" alt="Taj Mahal in Agra" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy">
+          <div class="gallery-ph-overlay">
+            <div class="gallery-slide-label">Taj Mahal, Agra</div>
+            <div class="gallery-slide-sub">Symbol of eternal love · UNESCO World Heritage Site</div>
+          </div>
+        </div>
+        <div class="gallery-slide" style="background:linear-gradient(135deg,#000d1a,#001a33);" role="group" aria-label="Slide 2 of 7: Varanasi Ghats">
+          <img src="images/gallery-varanasi.jpg" alt="Varanasi Ghats on the Ganges" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy">
+          <div class="gallery-ph-overlay">
+            <div class="gallery-slide-label">Varanasi Ghats</div>
+            <div class="gallery-slide-sub">The oldest living city · Where life meets the sacred Ganges</div>
+          </div>
+        </div>
+        <div class="gallery-slide" style="background:linear-gradient(135deg,#001a00,#003d1a);" role="group" aria-label="Slide 3 of 7: Kerala Backwaters">
+          <img src="images/gallery-kerala.jpg" alt="Kerala Backwaters scenic view" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy">
+          <div class="gallery-ph-overlay">
+            <div class="gallery-slide-label">Kerala Backwaters</div>
+            <div class="gallery-slide-sub">God's own country · A paradise of lagoons and rice fields</div>
+          </div>
+        </div>
+        <div class="gallery-slide" style="background:linear-gradient(135deg,#1a1a00,#3d3d00);" role="group" aria-label="Slide 4 of 7: The Himalayas">
+          <img src="images/gallery-himalayas.jpg" alt="The majestic Himalayas" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy">
+          <div class="gallery-ph-overlay">
+            <div class="gallery-slide-label">The Himalayas</div>
+            <div class="gallery-slide-sub">Abode of snow · Home of gods · Roof of the world</div>
+          </div>
+        </div>
+        <div class="gallery-slide" style="background:linear-gradient(135deg,#1a0015,#3d003d);" role="group" aria-label="Slide 5 of 7: Holi Festival">
+          <img src="images/gallery-holi.jpg" alt="Holi festival vibrant colours" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy">
+          <div class="gallery-ph-overlay">
+            <div class="gallery-slide-label">Holi Festival</div>
+            <div class="gallery-slide-sub">A thousand colours · One moment of pure joy</div>
+          </div>
+        </div>
+        <div class="gallery-slide" style="background:linear-gradient(135deg,#0d0d00,#2a2a00);" role="group" aria-label="Slide 6 of 7: Diwali Night">
+          <img src="images/gallery-diwali.jpg" alt="Diwali festival of lights at night" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy">
+          <div class="gallery-ph-overlay">
+            <div class="gallery-slide-label">Diwali Night</div>
+            <div class="gallery-slide-sub">Millions of lights · One victory of good over evil</div>
+          </div>
+        </div>
+        <div class="gallery-slide" style="background:linear-gradient(135deg,#001a1a,#003d3d);" role="group" aria-label="Slide 7 of 7: Jaipur">
+          <img src="images/gallery-elephant.jpg" alt="Colourful Elephant Festival in Jaipur" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy">
+          <div class="gallery-ph-overlay">
+            <div class="gallery-slide-label">Elephant Festival, Jaipur</div>
+            <div class="gallery-slide-sub">Royal Rajasthan · Where tradition marches in procession</div>
+          </div>
+        </div>
+      </div>
+      <button class="gallery-prev" onclick="galleryMove(-1)" aria-label="Previous slide">‹</button>
+      <button class="gallery-next" onclick="galleryMove(1)" aria-label="Next slide">›</button>
+    </div>
+    <div class="gallery-dots" id="gallery-dots" role="tablist" aria-label="Gallery navigation"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ QUIZ ═══════════════════════ -->
+<section id="quiz" aria-labelledby="quiz-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Test Your Knowledge</span>
+      <h2 class="section-title" id="quiz-heading">India Quiz</h2>
+      <div class="gold-divider" style="margin:20px auto;"></div>
+      <p class="section-sub" style="margin:0 auto 50px;">How much do you know about Incredible India? Let's find out!</p>
+    </div>
+    <div class="quiz-container">
+      <div class="quiz-box reveal">
+        <div class="quiz-progress-bar" aria-hidden="true">
+          <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+        </div>
+        <div class="quiz-score" id="quiz-score" aria-live="polite">Score: 0 / 10</div>
+        <div class="quiz-question" id="quiz-question" aria-live="polite">Loading question...</div>
+        <div class="quiz-options" id="quiz-options" role="group" aria-label="Answer options"></div>
+        <button class="quiz-next" id="quiz-next" onclick="nextQuestion()">Next Question →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer role="contentinfo">
+  <span class="footer-om" aria-label="Om symbol">ॐ</span>
+  <div class="footer-title">Incredible India</div>
+  <div class="footer-sub">ASTANA IT UNIVERSITY · CULTURAL EXCHANGE · 2026</div>
+  <div class="footer-flag" aria-label="Indian flag colours" role="img">
+    <div style="background:#FF9933;"></div>
+    <div style="background:#FFFFFF;"></div>
+    <div style="background:#138808;"></div>
+  </div>
+  <div class="footer-copy">
+    Made with ❤️ by an Indian student at AITU, Kazakhstan &nbsp;·&nbsp;
+    वसुधैव कुटुम्बकम् — The World is One Family
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
